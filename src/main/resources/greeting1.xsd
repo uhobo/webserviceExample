@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://www.migdal.co.il/xml/greeting" targetNamespace="https://www.migdal.co.il/xml/greeting">
+   <xsd:complexType name="person">
+      <xsd:sequence>
+         <xsd:element name="firstName" type="xsd:string" minOccurs="0"/>
+         <xsd:element name="lastName" type="xsd:string" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="greeting">
+      <xsd:sequence>
+         <xsd:element name="greeting" type="xsd:string" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="person" type="tns:person"/>
+   <xsd:element name="greeting" type="tns:greeting"/>
+</xsd:schema>
